@@ -24,11 +24,11 @@ Then, to actually run the tests:
 
     vagrant ssh
     cd /vagrant
-    node runner.js
+    node runner.js [optional path(s)]
 
-Currently, you'll need to edit runner.js to include the files you want
-to test. I'll work out runner.js to be a bit more flexible with arguments
-passed to the commandline, directories, etc. eventually.
+The paths you pass to runner.js will be parsed looking for nodeunit tests.
+If not path is provided, it will search the current directory recursively
+for tests.
 
 There are almost certainly better ways to do this -- please let me know
 all of the gross abominations you notice, assuming you have a fix. :)
